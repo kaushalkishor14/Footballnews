@@ -34,7 +34,7 @@ export class NavBar extends Component {
                     aria-current="page"
                     href="/home"
                   >
-                    Home
+                    Homes
                   </a>
                 </li>
                 <li className="nav-item">
