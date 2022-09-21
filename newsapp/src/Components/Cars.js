@@ -129,33 +129,27 @@ export class Cars extends Component {
       loading: false,
     };
   }
+  //lifecycle method hota ye run tb hoga jb aappka render hoga
+  componentDidMount() {}
 
   render() {
     return (
       <div className="container my-3">
         <h2> Football- Top Headlines</h2>
+
         <div className="row my-4">
-          <div className="col-md-4">
-            <CarItem
-              title="Aston Martin DB5 1964"
-              description="Brand: Aston Martin"
-              imageUrl="https://cdn.mos.cms.futurecdn.net/9HN22kEPoWRSHpsNNMeLGd-1200-80.jpg"
-            />
-          </div>{" "}
-          <div className="col-md-4">
-            <CarItem
-              title="Aston Martin DB5 1964"
-              description="Brand: Aston Martin"
-              // imageUrl="https://a.espncdn.com/i/cricket/cricinfo/1221668_1296x1296.gif"
-            />
-          </div>
-          <div className="col-md-4">
-            <CarItem
-              title="Aston Martin DB5 1964"
-              description="Brand: Aston Martin"
-              // imageUrl="https://a.espncdn.com/i/cricket/cricinfo/1221668_1296x1296.gif"
-            />
-          </div>
+          {this.state.artices.map((element) => {
+            return (
+              <div className="col-md-4" key={element.url}>
+                <CarItem
+                  title={element.title.slice(0, 45)}
+                  description={element.description.slice(0, 88)}
+                  imageUrl={element.urlToImage}
+                  newUrl={element.url}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -163,3 +157,4 @@ export class Cars extends Component {
 }
 
 export default Cars;
+//element.title.slice(o,45) is used for set word character
