@@ -6,11 +6,24 @@ export class CarItem extends Component {
     return (
       <div className="my-3">
         <div className="card" style={{ width: "18rem" }}>
-          <img src={imageUrl} className="card-img-top" alt="..." />
+          <img
+            src={
+              !imageUrl
+                ? "https://bsmedia.business-standard.com/_media/bs/img/article/2022-05/18/full/1652847247-0983.jpg"
+                : imageUrl
+            }
+            className="card-img-top"
+            alt="..."
+          />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
             <p className="card-text">{description}...</p>
-            <a href={newUrl} traget="_blank" className="btn btn-primary">
+            <a
+              rel="noreferrer"
+              href={newUrl}
+              traget="_blank"
+              className="btn btn-dark"
+            >
               Know More
             </a>
           </div>
