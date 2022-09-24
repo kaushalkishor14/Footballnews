@@ -86,7 +86,7 @@ export class Cars extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h2> Top Headlines</h2>
+        <h2 style={{ marginTop: "90px" }}> Top Headlines</h2>
         {this.state.loading && <Spinner />}
 
         <div className="row my-4">

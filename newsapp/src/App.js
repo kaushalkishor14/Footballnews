@@ -13,7 +13,7 @@ export default class App extends Component {
       <div>
         <Router>
           <NavBar />
-          <Cars pageSize={6} country="in" category="general" />
+          <Cars pageSize={20} country="in" category="general" />
         </Router>
       </div>
     );
