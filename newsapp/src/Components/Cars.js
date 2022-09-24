@@ -44,9 +44,8 @@ export class Cars extends Component {
       this.props.country
     }&category=${
       this.props.category
-    }&apiKey=e8b1ec50962b4890a13ffc8b7a22d318&page=${
-      this.state.page - 1
-    }&pageSize=${this.props.pageSize}`;
+    }&apiKey=e8b1ec50962b4890a13ffc8b7a22d318&page=${this.state.page -
+      1}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsData = await data.json();
@@ -69,9 +68,8 @@ export class Cars extends Component {
         this.props.country
       }&category=${
         this.props.category
-      }&apiKey=e8b1ec50962b4890a13ffc8b7a22d318&page=${
-        this.state.page + 1
-      }&pageSize=${this.props.pageSize}`;
+      }&apiKey=e8b1ec50962b4890a13ffc8b7a22d318&page=${this.state.page +
+        1}&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
       let data = await fetch(url);
       let parsData = await data.json();
@@ -105,6 +103,8 @@ export class Cars extends Component {
                     }
                     imageUrl={element.urlToImage}
                     newUrl={element.url}
+                    author={element.author}
+                    date={element.publishedAt}
                   />
                 </div>
               );
